@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+    - name: "jobs"
+    label: "Jobs Updates"
+    folder: "_jobs"
+    create: true
+    fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Date", name: "date", widget: "datetime"}
+            - {label: "Description", name: "body", widget: "markdown"}
+  
+    - name: "services"
+    label: "Our Services"
+    folder: "_services"
+    create: true
+    fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Description", name: "body", widget: "markdown"}
+
+    - name: "pages"
+    label: "Pages"
+    files:
+            - file: "_pages/about.md"
+        label: "About Us"
+        name: "about"
+        fields:
+                    - {label: "Title", name: "title", widget: "string"}
+                    - {label: "Body", name: "body", widget: "markdown"}
